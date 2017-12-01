@@ -18,18 +18,18 @@ public class SimpleConfig extends WebMvcConfigurerAdapter {
     @Value("${my.property}")
     private String myProperty;
 
-    private SimpleProperties simpleProperties;
-
-    @Autowired
-    public SimpleConfig(SimpleProperties simpleProperties) {
-        this.simpleProperties = simpleProperties;
-    }
+//    private SimpleProperties simpleProperties;
+//
+//    @Autowired
+//    public SimpleConfig(SimpleProperties simpleProperties) {
+//        this.simpleProperties = simpleProperties;
+//    }
 
     @PostConstruct
     private void postConstruct() {
         System.out.println(myProperty);
-        System.out.println(simpleProperties.getName());
-        System.out.println(simpleProperties.isEnabled());
+//        System.out.println(simpleProperties.getName());
+//        System.out.println(simpleProperties.isEnabled());
     }
 
     @Override
